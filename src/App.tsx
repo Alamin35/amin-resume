@@ -275,7 +275,7 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
       <section className="hero-section" id="hero" aria-label="Hero">
         <div className="section-grid hero-grid">
           <div className="section-title">
-            <h1>Md Al-Amin</h1>
+            <h1>AL AMIN</h1>
           </div>
           <div className="section-body hero-body">
             <figure className="profile-figure">

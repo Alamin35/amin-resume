@@ -195,6 +195,10 @@ main {
   gap: 32px;
 }
 
+.hero-body .note-block ul {
+  gap: 8px;
+}
+
 .profile-figure {
   position: relative;
   display: flex;
@@ -301,6 +305,17 @@ main {
 .short-bio {
   max-width: 340px;
   margin: 0;
+}
+
+.short-bio,
+.timeline-entry p,
+.simple-entry p,
+.case-study-block p {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 2;
 }
 
 .entry-head {
