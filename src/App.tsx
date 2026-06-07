@@ -215,8 +215,11 @@ const contact: LinkItem[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/amin035/" },
 ];
 
+type Theme = "dark" | "light";
+
 function App() {
   const [path, setPath] = useState(() => window.location.pathname);
+  const [theme, setTheme] = useState<Theme>("dark");
   const activeProject = useMemo(() => getProjectFromPath(path), [path]);
 
   useEffect(() => {
@@ -224,6 +227,12 @@ function App() {
     window.addEventListener("popstate", syncPath);
     return () => window.removeEventListener("popstate", syncPath);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((current) => (current === "dark" ? "light" : "dark"));
 
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -262,7 +271,7 @@ function App() {
 
   return (
     <div className="site-shell">
-      <Header onNavigate={navigate} />
+      <Header onNavigate={navigate} theme={theme} onToggleTheme={toggleTheme} />
       {activeProject ? <ProjectDetail project={activeProject} onNavigate={navigate} /> : <ResumeHome onNavigate={navigate} />}
       <Footer />
     </div>
@@ -335,17 +344,27 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
   );
 }
 
-function Header({ onNavigate }: { onNavigate: (href: string) => void }) {
+function Header({
+  onNavigate,
+  theme,
+  onToggleTheme,
+}: {
+  onNavigate: (href: string) => void;
+  theme: Theme;
+  onToggleTheme: () => void;
+}) {
   const goHome = (event: MouseEvent<HTMLAnchorElement>, hash = "") => {
     event.preventDefault();
     onNavigate(`/${hash}`);
   };
 
+  const nextThemeLabel = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+
   return (
     <header className="site-header">
       <div className="header-inner">
         <a href="/#hero" className="brand-link" onClick={(event) => goHome(event, "#hero")}>
-          Md Al-Amin&apos;s Resume
+          Al Amin&apos;s Resume
         </a>
         <nav aria-label="Resume sections">
           <a href="/#proficiencies" onClick={(event) => goHome(event, "#proficiencies")}>Proficiencies</a>
@@ -353,10 +372,15 @@ function Header({ onNavigate }: { onNavigate: (href: string) => void }) {
           <a href="/#projects" onClick={(event) => goHome(event, "#projects")}>Projects</a>
           <a href="/#contact" onClick={(event) => goHome(event, "#contact")}>Contact</a>
         </nav>
-        <a className="menu-button" href={resumeUrl} target="_blank" rel="noreferrer">
-          <DownloadIcon />
-          CV
-        </a>
+        <button
+          type="button"
+          className="menu-button theme-toggle"
+          onClick={onToggleTheme}
+          aria-label={nextThemeLabel}
+          title={nextThemeLabel}
+        >
+          {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+        </button>
       </div>
     </header>
   );
@@ -570,16 +594,24 @@ function Footer() {
   return (
     <footer className="site-footer">
       <span>© 2026 Md Al-Amin</span>
-      <span>Built as a dark mode technical resume</span>
       <span>Dhaka, Bangladesh</span>
     </footer>
   );
 }
 
-function DownloadIcon() {
+function SunIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 18v2h14v-2" />
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg className="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
     </svg>
   );
 }
