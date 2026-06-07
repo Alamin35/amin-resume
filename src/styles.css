@@ -195,6 +195,61 @@ main {
   gap: 32px;
 }
 
+.profile-figure {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 36px 0 20px;
+}
+
+.profile-figure::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  z-index: 0;
+  width: 230px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  background-image:
+    linear-gradient(#444444 1px, transparent 1px),
+    linear-gradient(90deg, #444444 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(circle, #000 42%, transparent 78%);
+  mask-image: radial-gradient(circle, #000 42%, transparent 78%);
+  opacity: 1;
+  pointer-events: none;
+}
+
+.profile-card {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 120px;
+  flex: 0 0 auto;
+  padding: 6px;
+  border-radius: 14px;
+  background: #dde7e2;
+  box-shadow:
+    0 0.7px 0.4px -0.5px #0000003d,
+    0 1.8px 1.1px -1px #0000003d,
+    0 3.6px 2.2px -1.5px #0000003b,
+    0 6.9px 4.1px -2px #00000038,
+    0 13.6px 8.2px -2.5px #0003,
+    0 30px 18px -3px #00000029;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  background-image: url("/assets/img/profile.jpg");
+  background-repeat: no-repeat;
+  background-size: 224%;
+  background-position: 50% 16%;
+}
+
 .note-block,
 .timeline-entry,
 .simple-entry {

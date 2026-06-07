@@ -278,6 +278,15 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
             <h1>Md Al-Amin</h1>
           </div>
           <div className="section-body hero-body">
+            <figure className="profile-figure">
+              <div className="profile-card">
+                <div
+                  className="profile-photo"
+                  role="img"
+                  aria-label="Portrait of Md Al-Amin"
+                />
+              </div>
+            </figure>
             <NoteBlock title="About" items={about} />
             <p className="short-bio">
               Senior year EEE student at BUET working where intelligent software, signal
