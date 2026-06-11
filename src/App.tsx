@@ -40,7 +40,7 @@ type LinkItem = {
 };
 
 const resumeUrl =
-  "https://drive.google.com/file/d/1RmXgeXgsA91VlESesK9dLXT8tSpitc1Q/view?usp=sharing";
+  "https://drive.google.com/file/d/1CWkpabhO-R3XEt4o7VIXqH5flWzJBNyf/view?usp=sharing";
 
 const about: NoteItem[] = [
   { label: "EEE Student at BUET" },
