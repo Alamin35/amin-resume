@@ -386,7 +386,6 @@ function Header({
 }) {
   const goHome = (event: MouseEvent<HTMLAnchorElement>, hash = "") => {
     event.preventDefault();
-    // Fixed navigation bug: Ensures routing falls back onto a clean root "/" context path string
     onNavigate(hash ? `/${hash}` : "/");
   };
 
@@ -395,8 +394,13 @@ function Header({
   return (
     <header className="site-header">
       <div className="header-inner">
-        {/* Removed hash string parameter to allow brand link to safely handle root context switches */}
-        <a href="/" className="brand-link" onClick={(event) => goHome(event)}>
+        {/* Updated brand link parameters to pop open your CV link in a new tab[cite: 1] */}
+        <a 
+          href={resumeUrl} 
+          className="brand-link" 
+          target="_blank" 
+          rel="noreferrer"
+        >
           Al Amin&apos;s Portfolio
         </a>
         <nav aria-label="Resume sections">
@@ -533,6 +537,7 @@ function ResumeSection({
   );
 }
 
+// Keeping presentation blocks standard
 function NoteBlock({ title, items }: { title: string; items: NoteItem[] }) {
   return (
     <article className="note-block">
@@ -605,7 +610,6 @@ function PublicationCard({ publication, onNavigate }: { publication: Publication
   );
 }
 
-// Keep core structural layout components intact
 function TextLink({ link }: { link: LinkItem }) {
   const external = link.href.startsWith("http");
   return (
@@ -681,7 +685,6 @@ function getPublicationFromPath(path: string) {
   return publications.find((pub) => pub.slug === match[1]);
 }
 
-// Safely loops outputs back around internal collection indices definitions
 function getNextPublication(slug: string) {
   const index = publications.findIndex((pub) => pub.slug === slug);
   return publications[(index + 1) % publications.length];
