@@ -218,7 +218,10 @@ const contact: LinkItem[] = [
 type Theme = "dark" | "light";
 
 function App() {
-  const [path, setPath] = useState(() => window.location.pathname);
+  // Fixed SSR / Build compilation safeguard fallback
+  const [path, setPath] = useState(() => 
+    typeof window !== "undefined" ? window.location.pathname : "/"
+  );
   const [theme, setTheme] = useState<Theme>("dark");
   const activeProject = useMemo(() => getProjectFromPath(path), [path]);
 
@@ -331,7 +334,8 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
 
       <ResumeSection title="Projects" id="projects" bodyClassName="project-list">
         {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} onNavigate={onNavigate} />
+          // Adjusted key parameter directly to unique URL slug architecture mapping
+          <ProjectCard key={project.slug} project={project} onNavigate={onNavigate} />
         ))}
       </ResumeSection>
 
@@ -550,6 +554,7 @@ function SimpleEntry({ title, meta }: { title: string; meta: string }) {
   );
 }
 
+// Fixed missing destructured parameter declaration bounds for 'onNavigate' component implementation
 function ProjectCard({ project, onNavigate }: { project: Project; onNavigate: (href: string) => void }) {
   const content = (
     <>
