@@ -16,7 +16,7 @@ type ResumeEntry = {
   description: string;
 };
 
-type Project = {
+type Publication = {
   slug: string;
   title: string;
   subtitle: string;
@@ -43,187 +43,183 @@ const resumeUrl =
   "https://drive.google.com/file/d/1CWkpabhO-R3XEt4o7VIXqH5flWzJBNyf/view?usp=sharing";
 
 const about: NoteItem[] = [
-  { label: "EEE Student at BUET" },
-  { label: "Based in Dhaka" },
-  { label: "AI, signals, embedded systems" },
-  { label: "Open to research and engineering roles" },
+  { label: "BSc Graduate in EEE from BUET" }, // Updated fresh graduate hook [cite: 8]
+  { label: "Based in Dhaka" }, // [cite: 2]
+  { label: "Physics-aware ML, CPS, & Signals" }, // [cite: 4]
+  { label: "Open to research & engineering roles" },
 ];
 
 const proficiencies = [
   {
-    title: "Skills",
-    items: ["Research prototyping", "Signal processing", "Embedded systems", "Frontend architecture"],
+    title: "Skills & Domain",
+    items: [
+      "Power System Analysis", // Added EEE Core skills [cite: 8]
+      "Control Systems", // [cite: 8]
+      "Signal Processing", // [cite: 4]
+      "Cyber-Physical Systems (CPS)", // [cite: 4]
+      "Anomaly Detection", // [cite: 4]
+      "Research Prototyping"
+    ],
   },
   {
-    title: "Tools",
-    items: ["PyTorch", "MATLAB", "TypeScript", "Python", "Proteus", "Arduino"],
+    title: "Tools & Simulation",
+    items: [
+      "PyTorch / TensorFlow", // Integrated from CV [cite: 28]
+      "MATLAB", // [cite: 28]
+      "CST Studio Suite", // Added EEE simulation tool [cite: 30]
+      "COMSOL Multiphysics", // Added EEE simulation tool [cite: 30]
+      "PCB Design", // Added EEE hardware framework [cite: 29]
+      "Sensor Fusion" // [cite: 29]
+    ],
   },
   {
     title: "Tech Stack",
-    items: ["React", "Node.js", "C/C++", "SQL", "DSP workflows", "Agentic software"],
+    items: [
+      "Python (NumPy, Pandas)", // [cite: 28]
+      "C / C++", // [cite: 28]
+      "Arduino & ESP8266", // [cite: 29]
+      "Raspberry Pi", // [cite: 29]
+      "Linux & Git", // [cite: 30]
+      "Web Dev (HTML/CSS/JS)" // [cite: 30]
+    ],
   },
   {
-    title: "Spoken Languages",
-    items: ["English", "Bangla"],
+    title: "Honors & Awards",
+    items: [
+      "Runner-up, International AI Fair China", // Added elite honors directly from your CV [cite: 13]
+      "Appreciation Award, Home Secretary of BD", // [cite: 15]
+      "Fellowship, Centre for Bangladesh Studies", // [cite: 16]
+      "Champion (Campus Round), Hult Prize", // [cite: 17]
+      "Board Exam Scholarship" // [cite: 18]
+    ],
   },
 ];
 
-const work: ResumeEntry[] = [
+const experiences: ResumeEntry[] = [ // Rebranded data container structure from 'work' to 'experiences'
   {
     title: "General Secretary",
     badge: "Current",
-    period: "May 2025 - Now",
-    organization: "IEEE BUET Signal Processing Society Student Chapter",
-    location: "Dhaka, BD",
+    period: "May 2025 - Present", // [cite: 33]
+    organization: "IEEE BUET Signal Processing Society Student Chapter", // [cite: 32]
+    location: "Dhaka, BD", // [cite: 6]
     description:
-      "Directing chapter operations, coordinating technical seminars, and helping students connect around signal processing, AI, and EEE research initiatives.",
+      "Directing overall chapter operations and coordinating with the executive committee. Organized technical seminars, hands-on workshops, and major networking events for student builders in the electrical and electronic engineering domain.", // [cite: 34, 35]
   },
   {
     title: "Assistant General Secretary",
-    period: "June 2022 - April 2025",
-    organization: "BUET Entrepreneurship Development Club",
-    location: "Dhaka, BD",
+    period: "June 2022 - April 2025", // [cite: 36]
+    organization: "BUET Entrepreneurship Development Club", // [cite: 37]
+    location: "Dhaka, BD", // [cite: 6]
     description:
-      "Organized skill-development events, managed sponsorships, and supported professional networking programs for student builders and founders.",
+      "Organized targeted student skill-development events, managed local and external corporate sponsorships, and arranged EDC Talks along with professional networking sessions.", // [cite: 37, 38]
   },
   {
     title: "Chief Technology Officer",
-    period: "June 2020 - December 2022",
-    organization: "Paintbeatart.com",
+    period: "June 2020 - December 2022", // [cite: 40]
+    organization: "Paintbeatart.com", // [cite: 39]
     location: "Remote",
     description:
-      "Architected an e-commerce platform supporting 100+ artists and managed technical operations through Bangabandhu Innovation Grant recognition.",
+      "Architected a scalable e-commerce infrastructure supporting over 100+ independent artists and supervised technical web operations. Recognized for architectural scalability via the Bangabandhu Innovation Grant (BIG) 2021.", // [cite: 41, 42]
   },
 ];
 
 const education: ResumeEntry[] = [
   {
-    title: "BSc in Electrical and Electronic Engineering",
-    badge: "Current",
-    period: "January 2022 - June 2026",
-    organization: "Bangladesh University of Engineering & Technology",
-    location: "Dhaka, BD",
+    title: "Bachelor of Science in Electrical and Electronic Engineering",
+    badge: "Graduated", // Updated student tag status to reflect your fresh graduate milestone [cite: 8]
+    period: "January 2022 - June 2026", // [cite: 7]
+    organization: "Bangladesh University of Engineering & Technology", // [cite: 6]
+    location: "Dhaka, BD", // [cite: 6]
     description:
-      "Studying power systems, control, digital signal processing, microprocessors, data structures, machine learning, and applied engineering research.",
+      "Completed rigorous engineering coursework across power system analysis, control engineering, digital signal processing (DSP), microprocessors & interfacing, applied machine learning, and data structures.", // [cite: 8]
   },
   {
     title: "Higher Secondary and Secondary Certificates",
-    period: "Completed before BUET",
-    organization: "Sylhet Cadet College",
-    location: "Sylhet, BD",
+    period: "Graduated with Honors",
+    organization: "Sylhet Cadet College", // [cite: 9]
+    location: "Sylhet, BD", // [cite: 9]
     description:
-      "Completed pre-university education with board scholarship recognition and a foundation in disciplined academics and leadership.",
+      "Completed pre-university education within a premier, disciplined pre-military institution. Recognized with a Board Exam Scholarship by the Bangladesh Ministry of Education for academic excellence.", // Updated description mapping with military context 
   },
 ];
 
-const certificates = [
-  {
-    title: "IEEE Research Publications in AI, IoT, and Robotics",
-    meta: "2025 - 2026",
-  },
-  {
-    title: "Advanced Engineering Coursework in AI, DSP, and Embedded Systems",
-    meta: "2022 - 2026",
-  },
-];
-
-const projects: Project[] = [
+const publications: Publication[] = [ // Rebranded variable from 'projects' to 'publications'
   {
     slug: "respiratory-sound-classification",
-    title: "Respiratory Sound Classification",
-    subtitle: "IEEE QPAIN 2026",
+    title: "Respiratory Sound Classification Study",
+    subtitle: "Research Publication",
     mark: "RS",
     year: "2026",
-    type: "Research Project",
+    type: "Comparative Study",
     role: "ML Researcher",
     image: "/assets/img/project/qpain2026.jpg",
     caseStudy: {
       objective:
-        "Build a respiratory sound classification workflow that can support non-invasive screening research through repeatable audio preprocessing and machine learning evaluation.",
+        "Bridge spectral specificity and semantic generalization on the ICBHI 2017 benchmark to construct a robust machine learning screening workflow.", // [cite: 20]
       process:
-        "I shaped the project around feature extraction, model comparison, and careful validation. The work focused on turning noisy clinical-style audio into a structured signal pipeline that could be inspected, tuned, and reused for publication-quality experiments.",
+        "Developed an augmented YAMNet feature pipeline utilizing latent-space SMOTE (k=5) data expansion to comprehensively balance extreme clinical sample distribution irregularities.", // [cite: 21]
       outcome:
-        "The project strengthened my research workflow across biomedical audio, signal processing, and applied machine learning while preparing the system for IEEE QPAIN 2026 submission.",
-      features: ["Respiratory audio preprocessing", "Model evaluation pipeline", "Biomedical signal features", "Publication-oriented reporting"],
+        "Achieved a 93.03% classification accuracy paired with an exceptional 91.7% recall rate for respiratory infections, demonstrating an ultra-low per-sample edge inference latency of ~0.0005 seconds tailored for remote deployment scenarios.", // [cite: 21]
+      features: ["Augmented YAMNet Embeddings", "Latent-space SMOTE balancing", "Low-latency edge deployment profile", "Comparative MFCC evaluation pipeline"], // [cite: 20, 21]
     },
   },
   {
     slug: "iot-fruit-storage-monitoring",
-    title: "IoT Fruit Storage Monitoring",
-    subtitle: "ICECTE 2026",
+    title: "IoT-Based Real-Time Storage Monitoring",
+    subtitle: "IEEE Xplore Publication",
     mark: "IoT",
     year: "2026",
     type: "Published Research",
-    role: "Embedded Systems Researcher",
+    role: "Embedded Developer",
     image: "/assets/img/project/icete2026.jpg",
-    externalHref: "https://ieeexplore.ieee.org/document/11429225",
+    externalHref: "https://ieeexplore.ieee.org/document/11429225", // [cite: 2]
     caseStudy: {
       objective:
-        "Design an IoT monitoring approach for fruit storage conditions so environmental data can be tracked and interpreted before quality loss becomes visible.",
+        "Design a dependable real-time environment preservation setup optimized for small-scale fruit agricultural systems to lower post-harvest degradation rates.", // [cite: 24, 26]
       process:
-        "The work combined sensing, embedded logic, and data interpretation. I contributed to the technical direction of the monitoring setup, emphasizing practical measurement, reliable communication, and a clear path from collected readings to useful storage decisions.",
+        "Architected a closed-loop automated embedded control node around ESP8266 Wi-Fi transceivers and microcontrollers to track shifting atmospheric signatures.", // [cite: 26]
       outcome:
-        "The project became an IEEE-indexed research output and helped connect my embedded systems experience with agricultural storage and applied IoT problem solving.",
-      features: ["Sensor-based monitoring", "Embedded data collection", "Storage condition tracking", "IEEE publication link"],
+        "Built a system that successfully regulates and responds to subtle environmental shifts, allowing growers to manage storage systems intelligently before crop loss occurs.", // [cite: 26]
+      features: ["ESP8266 closed-loop firmware", "Volatile Organic Compound (VOC) monitoring", "Temperature & humidity regulations", "Automated loss mitigation"], // [cite: 26]
     },
   },
   {
     slug: "dual-mode-floor-mopping-robot",
-    title: "Dual-Mode Floor Mopping Robot",
-    subtitle: "RAAICON 2025",
+    title: "Dual-Mode Floor Mopping Robot Architecture",
+    subtitle: "IEEE Robotics Publication",
     mark: "RB",
     year: "2025",
-    type: "Robotics Project",
-    role: "Control and Systems Developer",
+    type: "Robotics System",
+    role: "Control Engineer",
     image: "/assets/img/project/raaicon2025.jpg",
-    externalHref: "https://ieeexplore.ieee.org/document/11502377",
+    externalHref: "https://ieeexplore.ieee.org/document/11502377", // [cite: 2]
     caseStudy: {
       objective:
-        "Create a dual-mode robotic floor mopping system that could demonstrate practical movement, control, and cleaning behavior in a compact prototype.",
+        "Engineer a dependable hardware control approach for an indoor autonomous cleaner capable of transitioning smoothly across alternative operational modalities.", // [cite: 22, 23]
       process:
-        "The project required balancing mechanical constraints with electronics and control logic. I worked through prototype behavior, mode switching, and system integration so the robot could operate as a coherent engineering artifact.",
+        "Developed custom algorithmic tracking sequences utilizing a physical sensor-fusion architecture of ultrasonic ranging arrays and onboard digital gyroscopes.", // [cite: 23, 29]
       outcome:
-        "The work turned into an IEEE RAAICON 2025 publication and sharpened my ability to move from circuit-level decisions to full-system robotics behavior.",
-      features: ["Dual operation modes", "Robot control logic", "Prototype integration", "Published conference work"],
-    },
-  },
-  {
-    slug: "audio-deepfake-detection",
-    title: "Audio Deepfake Detection",
-    subtitle: "Signal ML",
-    mark: "AD",
-    year: "2025",
-    type: "Machine Learning Project",
-    role: "Signal ML Developer",
-    image: "/assets/img/project/eee402.jpg",
-    caseStudy: {
-      objective:
-        "Explore audio deepfake detection by building a machine learning workflow that can distinguish synthetic speech patterns from authentic audio signals.",
-      process:
-        "I approached the problem as a signal classification system, focusing on feature preparation, model behavior, and evaluation clarity. The implementation treated audio artifacts as measurable signal patterns rather than only application-level media files.",
-      outcome:
-        "The project deepened my understanding of trustworthy audio systems, signal-based ML, and adversarial media detection workflows.",
-      features: ["Audio feature extraction", "Synthetic speech classification", "Model comparison", "Signal-first ML framing"],
+        "Created an integrated prototype demonstrating smooth indoor trajectory tracking and active DC motor velocity regulation across variable room surfaces.", // [cite: 23]
+      features: ["Ultrasonic & gyroscope sensor fusion", "DC motor control sequences", "Autonomous navigation algorithm", "Dual-mode hardware implementation"], // [cite: 23, 29]
     },
   },
 ];
 
 const contact: LinkItem[] = [
-  { label: "Mail", href: "mailto:alamin20351@gmail.com" },
-  { label: "CV", href: resumeUrl },
+  { label: "Mail", href: "mailto:alamin20351@gmail.com" }, // [cite: 2]
+  { label: "Web Portal", href: "https://mdalamin.qzz.io/" }, // Added personalized web target from your CV [cite: 2]
   { label: "GitHub", href: "https://github.com/Alamin35" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/amin035/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/amin035/" }, // [cite: 2]
 ];
 
 type Theme = "dark" | "light";
 
 function App() {
-  // Fixed SSR / Build compilation safeguard fallback
   const [path, setPath] = useState(() => 
     typeof window !== "undefined" ? window.location.pathname : "/"
   );
   const [theme, setTheme] = useState<Theme>("dark");
-  const activeProject = useMemo(() => getProjectFromPath(path), [path]);
+  const activePublication = useMemo(() => getPublicationFromPath(path), [path]);
 
   useEffect(() => {
     const syncPath = () => setPath(window.location.pathname);
@@ -275,7 +271,11 @@ function App() {
   return (
     <div className="site-shell">
       <Header onNavigate={navigate} theme={theme} onToggleTheme={toggleTheme} />
-      {activeProject ? <ProjectDetail project={activeProject} onNavigate={navigate} /> : <ResumeHome onNavigate={navigate} />}
+      {activePublication ? (
+        <PublicationDetail publication={activePublication} onNavigate={navigate} />
+      ) : (
+        <ResumeHome onNavigate={navigate} />
+      )}
       <Footer />
     </div>
   );
@@ -287,7 +287,7 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
       <section className="hero-section" id="hero" aria-label="Hero">
         <div className="section-grid hero-grid">
           <div className="section-title">
-            <h1>AL AMIN</h1>
+            <h1>AL AMIN</h1> {/* [cite: 1] */}
           </div>
           <div className="section-body hero-body">
             <figure className="profile-figure">
@@ -301,9 +301,8 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
             </figure>
             <NoteBlock title="About" items={about} />
             <p className="short-bio">
-              Senior year EEE student at BUET working where intelligent software, signal
-              processing, embedded systems, and research prototypes meet.
-            </p>
+              Recent Electrical and Electronic Engineering graduate from BUET working at the intersections of Physics-aware Machine Learning, Cyber-Physical Systems (CPS), signal workflows, and resilient edge architectures.
+            </p> {/* Updated biography for a fresh graduate engineering focus  */}
           </div>
         </div>
       </section>
@@ -314,8 +313,8 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
         ))}
       </ResumeSection>
 
-      <ResumeSection title="Work" id="work">
-        {work.map((entry) => (
+      <ResumeSection title="Experiences" id="experiences"> {/* Rebranded from Work to Experiences */}
+        {experiences.map((entry) => (
           <TimelineEntry key={`${entry.title}-${entry.organization}`} entry={entry} />
         ))}
       </ResumeSection>
@@ -326,16 +325,9 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
         ))}
       </ResumeSection>
 
-      <ResumeSection title="Certificates" id="certificates">
-        {certificates.map((item) => (
-          <SimpleEntry key={item.title} title={item.title} meta={item.meta} />
-        ))}
-      </ResumeSection>
-
-      <ResumeSection title="Projects" id="projects" bodyClassName="project-list">
-        {projects.map((project) => (
-          // Adjusted key parameter directly to unique URL slug architecture mapping
-          <ProjectCard key={project.slug} project={project} onNavigate={onNavigate} />
+      <ResumeSection title="Publications" id="publications" bodyClassName="project-list"> {/* Rebranded from Projects to Publications */}
+        {publications.map((pub) => (
+          <PublicationCard key={pub.slug} publication={pub} onNavigate={onNavigate} />
         ))}
       </ResumeSection>
 
@@ -368,12 +360,12 @@ function Header({
     <header className="site-header">
       <div className="header-inner">
         <a href="/#hero" className="brand-link" onClick={(event) => goHome(event, "#hero")}>
-          Al Amin&apos;s Resume
+          Al Amin&apos;s Portfolio
         </a>
         <nav aria-label="Resume sections">
           <a href="/#proficiencies" onClick={(event) => goHome(event, "#proficiencies")}>Proficiencies</a>
-          <a href="/#work" onClick={(event) => goHome(event, "#work")}>Work</a>
-          <a href="/#projects" onClick={(event) => goHome(event, "#projects")}>Projects</a>
+          <a href="/#experiences" onClick={(event) => goHome(event, "#experiences")}>Experiences</a> {/* Updated label alignment */}
+          <a href="/#publications" onClick={(event) => goHome(event, "#publications")}>Publications</a> {/* Updated label alignment */}
           <a href="/#contact" onClick={(event) => goHome(event, "#contact")}>Contact</a>
         </nav>
         <button
@@ -390,63 +382,63 @@ function Header({
   );
 }
 
-function ProjectDetail({ project, onNavigate }: { project: Project; onNavigate: (href: string) => void }) {
-  const nextProject = getNextProject(project.slug);
+function PublicationDetail({ publication, onNavigate }: { publication: Publication; onNavigate: (href: string) => void }) {
+  const nextPub = getNextPublication(publication.slug);
 
   return (
     <main>
       <article className="project-page">
-        <section className="project-hero-section" aria-label={`${project.title} project`}>
+        <section className="project-hero-section" aria-label={`${publication.title} publication`}>
           <div className="project-page-container">
             <div className="project-hero-top">
               <div className="project-heading">
-                <h1>{project.title}</h1>
-                <h2>{project.subtitle}</h2>
+                <h1>{publication.title}</h1>
+                <h2>{publication.subtitle}</h2>
               </div>
-              <ul className="project-facts" aria-label="Project facts">
+              <ul className="project-facts" aria-label="Publication facts">
                 <li>
                   <span>Year</span>
-                  <strong>{project.year}</strong>
+                  <strong>{publication.year}</strong>
                 </li>
                 <li>
-                  <span>Type of Project</span>
-                  <strong>{project.type}</strong>
+                  <span>Classification</span>
+                  <strong>{publication.type}</strong>
                 </li>
                 <li>
-                  <span>My Role</span>
-                  <strong>{project.role}</strong>
+                  <span>My Contribution</span>
+                  <strong>{publication.role}</strong>
                 </li>
               </ul>
             </div>
             <figure className="project-banner">
-              <img src={project.image} alt="" />
+              <img src={publication.image} alt="" />
             </figure>
           </div>
         </section>
 
         <section className="case-study-section">
           <div className="project-page-container case-study-grid">
-            <h2>Case Study</h2>
+            <h2>Breakdown</h2>
             <div className="case-study-content">
               <CaseStudyBlock title="Objective">
-                <p>{project.caseStudy.objective}</p>
+                <p>{publication.caseStudy.objective}</p>
               </CaseStudyBlock>
-              <CaseStudyBlock title="Process">
-                <p>{project.caseStudy.process}</p>
+              <CaseStudyBlock title="Methodology & Process">
+                <p>{publication.caseStudy.process}</p>
               </CaseStudyBlock>
-              <CaseStudyBlock title="Outcome">
-                <p>{project.caseStudy.outcome}</p>
+              <CaseStudyBlock title="Key Findings & Outcome">
+                <p>{publication.caseStudy.outcome}</p>
               </CaseStudyBlock>
-              <CaseStudyBlock title="Standout Features">
+              <CaseStudyBlock title="Technical Features">
                 <ul>
-                  {project.caseStudy.features.map((feature) => (
+                  {publication.caseStudy.features.map((feature) => (
                     <li key={feature}>{feature}</li>
                   ))}
                 </ul>
               </CaseStudyBlock>
-              {project.externalHref ? (
-                <a className="text-link project-source-link" href={project.externalHref} target="_blank" rel="noreferrer">
-                  <span>Publication</span>
+              {publication.externalHref ? (
+                <a className="text-link project-source-link" href={publication.externalHref} target="_blank" rel="noreferrer">
+                  <span>IEEE Explore Document</span>
                   <ArrowIcon />
                 </a>
               ) : null}
@@ -456,13 +448,13 @@ function ProjectDetail({ project, onNavigate }: { project: Project; onNavigate: 
 
         <section className="project-navigation-section">
           <div className="project-page-container nav-grid">
-            <h2>More Projects</h2>
+            <h2>More Outputs</h2>
             <div className="next-project-row">
-              <button type="button" className="text-link next-project-link" onClick={() => onNavigate(`/projects/${nextProject.slug}`)}>
-                <span>Next</span>
+              <button type="button" className="text-link next-project-link" onClick={() => onNavigate(`/projects/${nextPub.slug}`)}>
+                <span>Next Research</span>
                 <ArrowIcon />
               </button>
-              <p>{nextProject.title}</p>
+              <p>{nextPub.title}</p>
             </div>
           </div>
         </section>
@@ -545,27 +537,17 @@ function TimelineEntry({ entry }: { entry: ResumeEntry }) {
   );
 }
 
-function SimpleEntry({ title, meta }: { title: string; meta: string }) {
-  return (
-    <article className="simple-entry">
-      <h3>{title}</h3>
-      <p>{meta}</p>
-    </article>
-  );
-}
-
-// Fixed missing destructured parameter declaration bounds for 'onNavigate' component implementation
-function ProjectCard({ project, onNavigate }: { project: Project; onNavigate: (href: string) => void }) {
+function PublicationCard({ publication, onNavigate }: { publication: Publication; onNavigate: (href: string) => void }) {
   const content = (
     <>
       <span className="project-arrow" aria-hidden="true">
         <ArrowIcon />
       </span>
       <div className="project-content">
-        <span className="project-mark">{project.mark}</span>
+        <span className="project-mark">{publication.mark}</span>
         <div>
-          <h3>{project.title}</h3>
-          <p>{project.subtitle}</p>
+          <h3>{publication.title}</h3>
+          <p>{publication.subtitle}</p>
         </div>
       </div>
     </>
@@ -574,10 +556,10 @@ function ProjectCard({ project, onNavigate }: { project: Project; onNavigate: (h
   return (
     <a
       className="project-card"
-      href={`/projects/${project.slug}`}
+      href={`/projects/${publication.slug}`}
       onClick={(event) => {
         event.preventDefault();
-        onNavigate(`/projects/${project.slug}`);
+        onNavigate(`/projects/${publication.slug}`);
       }}
     >
       {content}
@@ -598,8 +580,8 @@ function TextLink({ link }: { link: LinkItem }) {
 function Footer() {
   return (
     <footer className="site-footer">
-      <span>© 2026 Md Al-Amin</span>
-      <span>Dhaka, Bangladesh</span>
+      <span>© 2026 Md Al-Amin</span> {/* [cite: 1] */}
+      <span>Dhaka, Bangladesh</span> {/* [cite: 2, 6] */}
     </footer>
   );
 }
@@ -654,15 +636,15 @@ function ArrowIcon() {
   );
 }
 
-function getProjectFromPath(path: string) {
+function getPublicationFromPath(path: string) {
   const match = path.match(/^\/projects\/([^/]+)\/?$/);
   if (!match) return undefined;
-  return projects.find((project) => project.slug === match[1]);
+  return publications.find((pub) => pub.slug === match[1]);
 }
 
-function getNextProject(slug: string) {
-  const index = projects.findIndex((project) => project.slug === slug);
-  return projects[(index + 1) % projects.length];
+function getNextPublication(slug: string) {
+  const index = publications.findIndex((pub) => pub.slug === slug);
+  return publications[(index + 1) % publications.length];
 }
 
 export default App;
