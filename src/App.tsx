@@ -43,9 +43,9 @@ const resumeUrl =
   "https://drive.google.com/file/d/1CWkpabhO-R3XEt4o7VIXqH5flWzJBNyf/view?usp=sharing";
 
 const about: NoteItem[] = [
-  { label: "BSc Graduate in EEE from BUET" }, // Updated fresh graduate hook [cite: 8]
-  { label: "Based in Dhaka" }, // [cite: 2]
-  { label: "Physics-aware ML, CPS, & Signals" }, // [cite: 4]
+  { label: "BSc Graduate in EEE from BUET" },
+  { label: "Based in Dhaka" },
+  { label: "Physics-aware ML, CPS, & Signals" },
   { label: "Open to research & engineering roles" },
 ];
 
@@ -53,114 +53,112 @@ const proficiencies = [
   {
     title: "Skills & Domain",
     items: [
-      "Power System Analysis", // Added EEE Core skills [cite: 8]
-      "Control Systems", // [cite: 8]
-      "Signal Processing", // [cite: 4]
-      "Cyber-Physical Systems (CPS)", // [cite: 4]
-      "Anomaly Detection", // [cite: 4]
+      "Power System Analysis",
+      "Control Systems",
+      "Signal Processing",
+      "Cyber-Physical Systems (CPS)",
+      "Anomaly Detection",
       "Research Prototyping"
     ],
   },
   {
     title: "Tools & Simulation",
     items: [
-      "PyTorch / TensorFlow", // Integrated from CV [cite: 28]
-      "MATLAB", // [cite: 28]
-      "CST Studio Suite", // Added EEE simulation tool [cite: 30]
-      "COMSOL Multiphysics", // Added EEE simulation tool [cite: 30]
-      "PCB Design", // Added EEE hardware framework [cite: 29]
-      "Sensor Fusion" // [cite: 29]
+      "PyTorch / TensorFlow",
+      "MATLAB",
+      "CST Studio Suite",
+      "COMSOL Multiphysics",
+      "PCB Design",
+      "Sensor Fusion"
     ],
   },
   {
     title: "Tech Stack",
     items: [
-      "Python (NumPy, Pandas)", // [cite: 28]
-      "C / C++", // [cite: 28]
-      "Arduino & ESP8266", // [cite: 29]
-      "Raspberry Pi", // [cite: 29]
-      "Linux & Git", // [cite: 30]
-      "Web Dev (HTML/CSS/JS)" // [cite: 30]
+      "Python (NumPy, Pandas)",
+      "C / C++",
+      "Arduino & ESP8266",
+      "Raspberry Pi",
+      "Linux & Git",
+      "Web Dev (HTML/CSS/JS)"
     ],
   },
   {
-    title: "Honors & Awards",
+    title: "Spoken Languages",
     items: [
-      "Runner-up, International AI Fair China", // Added elite honors directly from your CV [cite: 13]
-      "Appreciation Award, Home Secretary of BD", // [cite: 15]
-      "Fellowship, Centre for Bangladesh Studies", // [cite: 16]
-      "Champion (Campus Round), Hult Prize", // [cite: 17]
-      "Board Exam Scholarship" // [cite: 18]
+      "English",
+      "Bangla"
     ],
   },
 ];
 
-const experiences: ResumeEntry[] = [ // Rebranded data container structure from 'work' to 'experiences'
+const experiences: ResumeEntry[] = [
   {
     title: "General Secretary",
     badge: "Current",
-    period: "May 2025 - Present", // [cite: 33]
-    organization: "IEEE BUET Signal Processing Society Student Chapter", // [cite: 32]
-    location: "Dhaka, BD", // [cite: 6]
+    period: "May 2025 - Present",
+    organization: "IEEE BUET Signal Processing Society Student Chapter",
+    location: "Dhaka, BD",
     description:
-      "Directing overall chapter operations and coordinating with the executive committee. Organized technical seminars, hands-on workshops, and major networking events for student builders in the electrical and electronic engineering domain.", // [cite: 34, 35]
+      "Directing overall chapter operations and coordinating with the executive committee. Organized technical seminars, hands-on workshops, and major networking events for student builders in the electrical and electronic engineering domain.",
   },
   {
     title: "Assistant General Secretary",
-    period: "June 2022 - April 2025", // [cite: 36]
-    organization: "BUET Entrepreneurship Development Club", // [cite: 37]
-    location: "Dhaka, BD", // [cite: 6]
+    period: "June 2022 - April 2025",
+    organization: "BUET Entrepreneurship Development Club",
+    location: "Dhaka, BD",
     description:
-      "Organized targeted student skill-development events, managed local and external corporate sponsorships, and arranged EDC Talks along with professional networking sessions.", // [cite: 37, 38]
+      "Organized targeted student skill-development events, managed local and external corporate sponsorships, and arranged EDC Talks along with professional networking sessions.",
   },
   {
     title: "Chief Technology Officer",
-    period: "June 2020 - December 2022", // [cite: 40]
-    organization: "Paintbeatart.com", // [cite: 39]
+    period: "June 2020 - December 2022",
+    organization: "Paintbeatart.com",
     location: "Remote",
     description:
-      "Architected a scalable e-commerce infrastructure supporting over 100+ independent artists and supervised technical web operations. Recognized for architectural scalability via the Bangabandhu Innovation Grant (BIG) 2021.", // [cite: 41, 42]
+      "Architected a scalable e-commerce infrastructure supporting over 100+ independent artists and supervised technical web operations. Recognized for architectural scalability via the Bangabandhu Innovation Grant (BIG) 2021.",
   },
 ];
 
 const education: ResumeEntry[] = [
   {
     title: "Bachelor of Science in Electrical and Electronic Engineering",
-    badge: "Graduated", // Updated student tag status to reflect your fresh graduate milestone [cite: 8]
-    period: "January 2022 - June 2026", // [cite: 7]
-    organization: "Bangladesh University of Engineering & Technology", // [cite: 6]
-    location: "Dhaka, BD", // [cite: 6]
+    badge: "Graduated",
+    period: "January 2022 - June 2026",
+    organization: "Bangladesh University of Engineering & Technology",
+    location: "Dhaka, BD",
     description:
-      "Completed rigorous engineering coursework across power system analysis, control engineering, digital signal processing (DSP), microprocessors & interfacing, applied machine learning, and data structures.", // [cite: 8]
+      "Completed rigorous engineering coursework across power system analysis, control engineering, digital signal processing (DSP), microprocessors & interfacing, applied machine learning, and data structures.",
   },
   {
     title: "Higher Secondary and Secondary Certificates",
     period: "Graduated with Honors",
-    organization: "Sylhet Cadet College", // [cite: 9]
-    location: "Sylhet, BD", // [cite: 9]
+    organization: "Sylhet Cadet College",
+    location: "Sylhet, BD",
     description:
-      "Completed pre-university education within a premier, disciplined pre-military institution. Recognized with a Board Exam Scholarship by the Bangladesh Ministry of Education for academic excellence.", // Updated description mapping with military context 
+      "Completed pre-university education within a premier, disciplined pre-military institution. Recognized with a Board Exam Scholarship by the Bangladesh Ministry of Education for academic excellence.",
   },
 ];
 
-const publications: Publication[] = [ // Rebranded variable from 'projects' to 'publications'
+const publications: Publication[] = [
   {
     slug: "respiratory-sound-classification",
     title: "Respiratory Sound Classification Study",
-    subtitle: "Research Publication",
+    subtitle: "IEEE Xplore Publication",
     mark: "RS",
     year: "2026",
     type: "Comparative Study",
     role: "ML Researcher",
     image: "/assets/img/project/qpain2026.jpg",
+    externalHref: "https://ieeexplore.ieee.org/document/11546080",
     caseStudy: {
       objective:
-        "Bridge spectral specificity and semantic generalization on the ICBHI 2017 benchmark to construct a robust machine learning screening workflow.", // [cite: 20]
+        "Bridge spectral specificity and semantic generalization on the ICBHI 2017 benchmark to construct a robust machine learning screening workflow.",
       process:
-        "Developed an augmented YAMNet feature pipeline utilizing latent-space SMOTE (k=5) data expansion to comprehensively balance extreme clinical sample distribution irregularities.", // [cite: 21]
+        "Developed an augmented YAMNet feature pipeline utilizing latent-space SMOTE (k=5) data expansion to comprehensively balance extreme clinical sample distribution irregularities.",
       outcome:
-        "Achieved a 93.03% classification accuracy paired with an exceptional 91.7% recall rate for respiratory infections, demonstrating an ultra-low per-sample edge inference latency of ~0.0005 seconds tailored for remote deployment scenarios.", // [cite: 21]
-      features: ["Augmented YAMNet Embeddings", "Latent-space SMOTE balancing", "Low-latency edge deployment profile", "Comparative MFCC evaluation pipeline"], // [cite: 20, 21]
+        "Achieved a 93.03% classification accuracy paired with an exceptional 91.7% recall rate for respiratory infections, demonstrating an ultra-low per-sample edge inference latency of ~0.0005 seconds tailored for remote deployment scenarios.",
+      features: ["Augmented YAMNet Embeddings", "Latent-space SMOTE balancing", "Low-latency edge deployment profile", "Comparative MFCC evaluation pipeline"],
     },
   },
   {
@@ -172,15 +170,15 @@ const publications: Publication[] = [ // Rebranded variable from 'projects' to '
     type: "Published Research",
     role: "Embedded Developer",
     image: "/assets/img/project/icete2026.jpg",
-    externalHref: "https://ieeexplore.ieee.org/document/11429225", // [cite: 2]
+    externalHref: "https://ieeexplore.ieee.org/document/11429225",
     caseStudy: {
       objective:
-        "Design a dependable real-time environment preservation setup optimized for small-scale fruit agricultural systems to lower post-harvest degradation rates.", // [cite: 24, 26]
+        "Design a dependable real-time environment preservation setup optimized for small-scale fruit agricultural systems to lower post-harvest degradation rates.",
       process:
-        "Architected a closed-loop automated embedded control node around ESP8266 Wi-Fi transceivers and microcontrollers to track shifting atmospheric signatures.", // [cite: 26]
+        "Architected a closed-loop automated embedded control node around ESP8266 Wi-Fi transceivers and microcontrollers to track shifting atmospheric signatures.",
       outcome:
-        "Built a system that successfully regulates and responds to subtle environmental shifts, allowing growers to manage storage systems intelligently before crop loss occurs.", // [cite: 26]
-      features: ["ESP8266 closed-loop firmware", "Volatile Organic Compound (VOC) monitoring", "Temperature & humidity regulations", "Automated loss mitigation"], // [cite: 26]
+        "Built a system that successfully regulates and responds to subtle environmental shifts, allowing growers to manage storage systems intelligently before crop loss occurs.",
+      features: ["ESP8266 closed-loop firmware", "Volatile Organic Compound (VOC) monitoring", "Temperature & humidity regulations", "Automated loss mitigation"],
     },
   },
   {
@@ -192,24 +190,55 @@ const publications: Publication[] = [ // Rebranded variable from 'projects' to '
     type: "Robotics System",
     role: "Control Engineer",
     image: "/assets/img/project/raaicon2025.jpg",
-    externalHref: "https://ieeexplore.ieee.org/document/11502377", // [cite: 2]
+    externalHref: "https://ieeexplore.ieee.org/document/11502377",
     caseStudy: {
       objective:
-        "Engineer a dependable hardware control approach for an indoor autonomous cleaner capable of transitioning smoothly across alternative operational modalities.", // [cite: 22, 23]
+        "Engineer a dependable hardware control approach for an indoor autonomous cleaner capable of transitioning smoothly across alternative operational modalities.",
       process:
-        "Developed custom algorithmic tracking sequences utilizing a physical sensor-fusion architecture of ultrasonic ranging arrays and onboard digital gyroscopes.", // [cite: 23, 29]
+        "Developed custom algorithmic tracking sequences utilizing a physical sensor-fusion architecture of ultrasonic ranging arrays and onboard digital gyroscopes.",
       outcome:
-        "Created an integrated prototype demonstrating smooth indoor trajectory tracking and active DC motor velocity regulation across variable room surfaces.", // [cite: 23]
-      features: ["Ultrasonic & gyroscope sensor fusion", "DC motor control sequences", "Autonomous navigation algorithm", "Dual-mode hardware implementation"], // [cite: 23, 29]
+        "Created an integrated prototype demonstrating smooth indoor trajectory tracking and active DC motor velocity regulation across variable room surfaces.",
+      features: ["Ultrasonic & gyroscope sensor fusion", "DC motor control sequences", "Autonomous navigation algorithm", "Dual-mode hardware implementation"],
     },
   },
 ];
 
+const honors: ResumeEntry[] = [
+  {
+    title: "Runner-up",
+    period: "2020",
+    organization: "International AI Fair for High School Students",
+    location: "China",
+    description: "Globally recognized for the design and implementation of a Deep Learning-based Emotion Management System.",
+  },
+  {
+    title: "Appreciation Award",
+    period: "2021",
+    organization: "Home Secretary of Bangladesh",
+    location: "Dhaka, BD",
+    description: "Awarded high-level civic commendation for impactful social deployment initiatives and leadership.",
+  },
+  {
+    title: "Prestigious Fellowship",
+    period: "2020",
+    organization: "Centre for Bangladesh Studies (CBS)",
+    location: "Dhaka, BD",
+    description: "Selected into the selective academic research cohort focusing on engineering-driven socioeconomic research.",
+  },
+  {
+    title: "Champion (Campus Round)",
+    period: "2023",
+    organization: "Hult Prize",
+    location: "BUET, Dhaka",
+    description: "Led business architecture and scalable deployment metrics pitching for international social venture generation.",
+  },
+];
+
 const contact: LinkItem[] = [
-  { label: "Mail", href: "mailto:alamin20351@gmail.com" }, // [cite: 2]
-  { label: "Web Portal", href: "https://mdalamin.qzz.io/" }, // Added personalized web target from your CV [cite: 2]
+  { label: "Mail", href: "mailto:alamin20351@gmail.com" },
+  { label: "Web Portal", href: "https://mdalamin.qzz.io/" },
   { label: "GitHub", href: "https://github.com/Alamin35" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/amin035/" }, // [cite: 2]
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/amin035/" },
 ];
 
 type Theme = "dark" | "light";
@@ -287,7 +316,7 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
       <section className="hero-section" id="hero" aria-label="Hero">
         <div className="section-grid hero-grid">
           <div className="section-title">
-            <h1>AL AMIN</h1> {/* [cite: 1] */}
+            <h1>AL AMIN</h1>
           </div>
           <div className="section-body hero-body">
             <figure className="profile-figure">
@@ -302,7 +331,7 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
             <NoteBlock title="About" items={about} />
             <p className="short-bio">
               Recent Electrical and Electronic Engineering graduate from BUET working at the intersections of Physics-aware Machine Learning, Cyber-Physical Systems (CPS), signal workflows, and resilient edge architectures.
-            </p> {/* Updated biography for a fresh graduate engineering focus  */}
+            </p>
           </div>
         </div>
       </section>
@@ -313,7 +342,7 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
         ))}
       </ResumeSection>
 
-      <ResumeSection title="Experiences" id="experiences"> {/* Rebranded from Work to Experiences */}
+      <ResumeSection title="Experiences" id="experiences">
         {experiences.map((entry) => (
           <TimelineEntry key={`${entry.title}-${entry.organization}`} entry={entry} />
         ))}
@@ -325,9 +354,15 @@ function ResumeHome({ onNavigate }: { onNavigate: (href: string) => void }) {
         ))}
       </ResumeSection>
 
-      <ResumeSection title="Publications" id="publications" bodyClassName="project-list"> {/* Rebranded from Projects to Publications */}
+      <ResumeSection title="Publications" id="publications" bodyClassName="project-list">
         {publications.map((pub) => (
           <PublicationCard key={pub.slug} publication={pub} onNavigate={onNavigate} />
+        ))}
+      </ResumeSection>
+
+      <ResumeSection title="Honors & Awards" id="honors">
+        {honors.map((entry) => (
+          <TimelineEntry key={`${entry.title}-${entry.organization}`} entry={entry} />
         ))}
       </ResumeSection>
 
@@ -351,7 +386,8 @@ function Header({
 }) {
   const goHome = (event: MouseEvent<HTMLAnchorElement>, hash = "") => {
     event.preventDefault();
-    onNavigate(`/${hash}`);
+    // Fixed navigation bug: Ensures routing falls back onto a clean root "/" context path string
+    onNavigate(hash ? `/${hash}` : "/");
   };
 
   const nextThemeLabel = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
@@ -359,13 +395,15 @@ function Header({
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a href="/#hero" className="brand-link" onClick={(event) => goHome(event, "#hero")}>
+        {/* Removed hash string parameter to allow brand link to safely handle root context switches */}
+        <a href="/" className="brand-link" onClick={(event) => goHome(event)}>
           Al Amin&apos;s Portfolio
         </a>
         <nav aria-label="Resume sections">
           <a href="/#proficiencies" onClick={(event) => goHome(event, "#proficiencies")}>Proficiencies</a>
-          <a href="/#experiences" onClick={(event) => goHome(event, "#experiences")}>Experiences</a> {/* Updated label alignment */}
-          <a href="/#publications" onClick={(event) => goHome(event, "#publications")}>Publications</a> {/* Updated label alignment */}
+          <a href="/#experiences" onClick={(event) => goHome(event, "#experiences")}>Experiences</a>
+          <a href="/#publications" onClick={(event) => goHome(event, "#publications")}>Publications</a>
+          <a href="/#honors" onClick={(event) => goHome(event, "#honors")}>Honors</a>
           <a href="/#contact" onClick={(event) => goHome(event, "#contact")}>Contact</a>
         </nav>
         <button
@@ -438,7 +476,7 @@ function PublicationDetail({ publication, onNavigate }: { publication: Publicati
               </CaseStudyBlock>
               {publication.externalHref ? (
                 <a className="text-link project-source-link" href={publication.externalHref} target="_blank" rel="noreferrer">
-                  <span>IEEE Explore Document</span>
+                  <span>IEEE Xplore Document</span>
                   <ArrowIcon />
                 </a>
               ) : null}
@@ -567,6 +605,7 @@ function PublicationCard({ publication, onNavigate }: { publication: Publication
   );
 }
 
+// Keep core structural layout components intact
 function TextLink({ link }: { link: LinkItem }) {
   const external = link.href.startsWith("http");
   return (
@@ -580,8 +619,8 @@ function TextLink({ link }: { link: LinkItem }) {
 function Footer() {
   return (
     <footer className="site-footer">
-      <span>© 2026 Md Al-Amin</span> {/* [cite: 1] */}
-      <span>Dhaka, Bangladesh</span> {/* [cite: 2, 6] */}
+      <span>© 2026 Md Al-Amin</span>
+      <span>Dhaka, Bangladesh</span>
     </footer>
   );
 }
@@ -642,6 +681,7 @@ function getPublicationFromPath(path: string) {
   return publications.find((pub) => pub.slug === match[1]);
 }
 
+// Safely loops outputs back around internal collection indices definitions
 function getNextPublication(slug: string) {
   const index = publications.findIndex((pub) => pub.slug === slug);
   return publications[(index + 1) % publications.length];
