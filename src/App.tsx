@@ -117,7 +117,7 @@ const publications: Publication[] = [
   },
 ];
 
-type Category = "Machine Learning" | "Hardware & Embedded" | "Power & Simulation" | "Software";
+type Category = "Machine Learning" | "Power" | "Signal Processing" | "Electronics";
 
 type Project = {
   title: string;
@@ -153,7 +153,7 @@ const projects: Project[] = [
   {
     title: "Pulmonary Disease Detection from Lung Sounds",
     label: "Course project · EEE 312",
-    category: "Machine Learning",
+    category: "Signal Processing",
     icon: "lungs",
     description:
       "Signal processing and machine learning pipeline for lung-sound recordings: spectrogram analysis, handcrafted features and pretrained audio embeddings, evaluated for generalisation across patients.",
@@ -172,7 +172,7 @@ const projects: Project[] = [
   {
     title: "Graphene-Based Multiband Terahertz Metasurface Absorber",
     label: "Undergraduate thesis · BUET",
-    category: "Power & Simulation",
+    category: "Electronics",
     icon: "grid",
     description:
       "Designed and optimised a graphene-based multiband THz metasurface absorber on different dielectric substrates, simulated in CST Studio Suite. Supervised by Dr. Md. Shah Alam.",
@@ -181,7 +181,7 @@ const projects: Project[] = [
   {
     title: "Dual-Mode Floor Mopping Robot",
     label: "Published · IEEE RAAICON 2025",
-    category: "Hardware & Embedded",
+    category: "Electronics",
     icon: "robot",
     description:
       "Autonomous floor-mopping robot with two operating modes, using ultrasonic ranging and gyroscope feedback for navigation and DC motor control.",
@@ -191,7 +191,7 @@ const projects: Project[] = [
   {
     title: "IoT Fruit Storage Monitoring and Preservation",
     label: "Published · ICECTE 2026 · EEE 416",
-    category: "Hardware & Embedded",
+    category: "Electronics",
     icon: "chip",
     description:
       "Real-time monitoring and closed-loop control of temperature, humidity and VOC levels for small-scale fruit storage, built on ESP8266 and Arduino.",
@@ -201,7 +201,7 @@ const projects: Project[] = [
   {
     title: "Precision Pesticide Spraying & Crop Health Drone",
     label: "Course project · EEE 404",
-    category: "Hardware & Embedded",
+    category: "Electronics",
     icon: "drone",
     description:
       "Drone for targeted pesticide spraying and crop health monitoring, combining onboard cameras, real-time analysis and field mapping on an embedded platform.",
@@ -210,7 +210,7 @@ const projects: Project[] = [
   {
     title: "Smart-Grid UPS with Bidirectional Inverter",
     label: "Course project · EEE 316",
-    category: "Hardware & Embedded",
+    category: "Power",
     icon: "bolt",
     description:
       "Designed and built a smart-grid style UPS around a bidirectional inverter, handling grid-to-battery charging and battery-to-grid supply under microcontroller control.",
@@ -219,7 +219,7 @@ const projects: Project[] = [
   {
     title: "UART Design in Verilog for FPGA",
     label: "Course project · EEE 304",
-    category: "Hardware & Embedded",
+    category: "Electronics",
     icon: "chip",
     description:
       "Implemented a UART transmitter and receiver in Verilog HDL for FPGA, covering serial framing, baud-rate timing and synchronous clock-domain design.",
@@ -228,7 +228,7 @@ const projects: Project[] = [
   {
     title: "FM Transmitter and Receiver",
     label: "Course project · EEE 310",
-    category: "Hardware & Embedded",
+    category: "Signal Processing",
     icon: "radio",
     description: "Built and tested a frequency-modulation transmitter and receiver circuit for analog communication.",
     tags: ["Analog communication", "RF circuits"],
@@ -236,7 +236,7 @@ const projects: Project[] = [
   {
     title: "Three-Phase Induction Motor Rewinding",
     label: "Course project · EEE 206",
-    category: "Hardware & Embedded",
+    category: "Power",
     icon: "motor",
     description:
       "Hands-on rewinding of a three-phase induction motor, from winding schematic to reassembly and performance testing.",
@@ -245,7 +245,7 @@ const projects: Project[] = [
   {
     title: "Stability Study of the IEEE 30-Bus System",
     label: "Course project · EEE 306",
-    category: "Power & Simulation",
+    category: "Power",
     icon: "network",
     description:
       "Power-flow and voltage-stability study of the IEEE 30-bus test system under increasing levels of solar PV penetration, simulated in PSS/E.",
@@ -254,7 +254,7 @@ const projects: Project[] = [
   {
     title: "Numerical Solution of the Heat Conduction Equation",
     label: "Course project · EEE 212",
-    category: "Power & Simulation",
+    category: "Power",
     icon: "heat",
     description:
       "Solved the heat conduction equation numerically in MATLAB and visualised steady-state temperature distributions and heat-generation profiles.",
@@ -263,7 +263,7 @@ const projects: Project[] = [
   {
     title: "Integrated Electrical Services Design",
     label: "Course project · EEE 414",
-    category: "Power & Simulation",
+    category: "Power",
     icon: "building",
     description: "Electrical services layout and wiring design for a multi-room building, drafted in AutoCAD.",
     tags: ["AutoCAD", "Building services"],
@@ -271,30 +271,14 @@ const projects: Project[] = [
   {
     title: "AM Modulation and Demodulation",
     label: "Course project · EEE 208",
-    category: "Power & Simulation",
+    category: "Signal Processing",
     icon: "wave",
     description: "Implemented amplitude modulation and demodulation and analysed the resulting signals.",
     tags: ["Communication systems", "Signals"],
   },
-  {
-    title: "Paintbeatart.com E-commerce Platform",
-    label: "Chief Technology Officer · 2020–2022",
-    category: "Software",
-    icon: "code",
-    description:
-      "Built and ran the technical side of an online marketplace supporting 100+ artists. The venture won the Bangabandhu Innovation Grant in 2021.",
-    tags: ["Web development", "E-commerce"],
-    award: "Bangabandhu Innovation Grant 2021",
-  },
 ];
 
-const categories: Array<"All" | Category> = [
-  "All",
-  "Machine Learning",
-  "Hardware & Embedded",
-  "Power & Simulation",
-  "Software",
-];
+const categories: Array<"All" | Category> = ["All", "Machine Learning", "Power", "Signal Processing", "Electronics"];
 
 type Experience = {
   role: string;
@@ -354,11 +338,12 @@ const skills = [
   {
     title: "Machine Learning",
     items: [
+      "Large language models (LLMs)",
+      "Transformers & attention models",
       "Deep learning (CNN, LSTM)",
+      "Transfer learning & audio embeddings (YAMNet)",
       "Gradient-boosted trees",
-      "Transfer learning (audio embeddings)",
-      "Class-imbalance handling",
-      "Cross-validation & statistical testing",
+      "Class imbalance (SMOTE), cross-validation & statistical testing",
     ],
   },
   {
@@ -454,7 +439,7 @@ function Hero() {
           <p className="hero-desc">
             I’m <strong>MD Al Amin</strong>, an Electrical and Electronic Engineering graduate of{" "}
             <strong>BUET</strong> (2022–2026). I work on machine learning for biomedical signals and
-            neuroimaging, brain disorders, quantitative MRI, and signal and image processing.
+            neuroimaging, signal and image processing, wireless communication, and metasurfaces.
           </p>
           <div className="hero-cta">
             <a className="btn btn-primary" href="#publications">
@@ -468,14 +453,14 @@ function Hero() {
             </a>
           </div>
           <div className="hero-stats">
-            <Stat num="3" label="IEEE Publications" />
+            <Stat num="3" label="Publications" />
             <Stat num="2" label="Research Projects" />
             <Stat num={`${projects.length}`} label="Projects" />
             <Stat num="5" label="Honors & Awards" />
           </div>
         </div>
         <figure className="hero-photo">
-          <img src="/assets/img/me.jpg" alt="Portrait of MD Al Amin" />
+          <img src="/assets/img/headshot.jpg" alt="Portrait of MD Al Amin" />
           <figcaption>
             <span className="photo-name">MD Al Amin</span>
             <span className="photo-sub">B.Sc. in EEE · BUET</span>
@@ -530,13 +515,14 @@ function About() {
           <p>
             I studied Electrical and Electronic Engineering at{" "}
             <strong>Bangladesh University of Engineering and Technology (BUET)</strong>. My research interests are
-            machine learning for biomedical signals and neuroimaging, brain disorders, quantitative MRI, and signal
-            and image processing.
+            machine learning for biomedical signals and neuroimaging, brain disorders, quantitative MRI, signal and
+            image processing, <strong>wireless communication</strong>, and <strong>metasurfaces</strong> for
+            terahertz applications.
           </p>
           <p>
-            At BUET I have studied <strong>brain iron in Parkinson’s disease</strong> with quantitative susceptibility
-            mapping, gene-expression atlases and UK Biobank genetics, and built models that predict{" "}
-            <strong>cyclone damage at upazila level</strong> across Bangladesh.
+            At BUET my coursework covered <strong>digital signal processing</strong>, random signals and
+            processes, <strong>machine learning</strong>, medical imaging, <strong>wireless</strong>, optical, radar and
+            satellite communication, control systems, and microprocessors and embedded systems.
           </p>
         </div>
         <div>
