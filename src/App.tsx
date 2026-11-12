@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 /* ─────────────────────────── Content ─────────────────────────── */
 
 const resumeUrl =
-  "https://drive.google.com/file/d/1CWkpabhO-R3XEt4o7VIXqH5flWzJBNyf/view?usp=sharing";
+  "https://drive.google.com/file/d/1inFhzQx0VUhsy1rtjwM2P82wb_z1WiuK/view?usp=sharing";
 
 const email = "alamin20351@gmail.com";
 
