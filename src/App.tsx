@@ -8,6 +8,14 @@ const resumeUrl =
 
 const email = "alamin20351@gmail.com";
 
+const researchAreas = [
+  "Machine Learning",
+  "Biomedical ML",
+  "Neuroimage Analysis",
+  "Wireless Communication",
+  "Metamaterials",
+];
+
 const navLinks = [
   { id: "about", label: "About" },
   { id: "education", label: "Education" },
@@ -432,15 +440,20 @@ function Hero() {
         <div className="hero-text">
           <div className="hero-tag">Open to research opportunities</div>
           <h1>
-            Machine learning for
-            <br />
-            <em>brain &amp; biomedical</em> signals.
+            Machine learning, <em>neuroimaging,</em> wireless &amp; metamaterials.
           </h1>
           <p className="hero-desc">
             I’m <strong>MD Al Amin</strong>, an Electrical and Electronic Engineering graduate of{" "}
-            <strong>BUET</strong> (2022–2026). I work on machine learning for biomedical signals and
-            neuroimaging, signal and image processing, wireless communication, and metasurfaces.
+            <strong>BUET</strong> (2022–2026). My interests span machine learning, biomedical signal and neuroimage
+            analysis, wireless communication, and metamaterials.
           </p>
+          <ul className="hero-areas" aria-label="Research areas">
+            {researchAreas.map((area) => (
+              <li key={area} className="tag accent">
+                {area}
+              </li>
+            ))}
+          </ul>
           <div className="hero-cta">
             <a className="btn btn-primary" href="#publications">
               View Publications
@@ -515,9 +528,9 @@ function About() {
           <p>
             I studied Electrical and Electronic Engineering at{" "}
             <strong>Bangladesh University of Engineering and Technology (BUET)</strong>. My research interests are
-            machine learning for biomedical signals and neuroimaging, brain disorders, quantitative MRI, signal and
-            image processing, <strong>wireless communication</strong>, and <strong>metasurfaces</strong> for
-            terahertz applications.
+            <strong>machine learning</strong>, biomedical signal and <strong>neuroimage analysis</strong> (brain
+            disorders, quantitative MRI), signal and image processing, <strong>wireless communication</strong>, and{" "}
+            <strong>metamaterials</strong> and metasurfaces for terahertz applications.
           </p>
           <p>
             At BUET my coursework covered <strong>digital signal processing</strong>, random signals and
@@ -787,8 +800,8 @@ function Contact() {
         <div className="section-label">Contact</div>
         <h2>Let’s work together.</h2>
         <p className="subtitle">
-          I’m open to research positions and collaborations in biomedical signal processing, neuroimaging and applied
-          machine learning. Email is the best way to reach me.
+          I’m open to research positions and collaborations in machine learning, biomedical signal and neuroimage
+          analysis, wireless communication, and metamaterials. Email is the best way to reach me.
         </p>
         <div className="contact-links">
           {links.map((link) => {
