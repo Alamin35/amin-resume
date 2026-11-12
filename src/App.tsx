@@ -440,7 +440,7 @@ function Hero() {
         <div className="hero-text">
           <div className="hero-tag">Open to research opportunities</div>
           <h1>
-            Machine learning, <em>neuroimaging,</em> wireless &amp; metamaterials.
+            Machine learning, <em>neuroimaging,</em> wireless communication &amp; metamaterials.
           </h1>
           <p className="hero-desc">
             I’m <strong>MD Al Amin</strong>, an Electrical and Electronic Engineering graduate of{" "}
